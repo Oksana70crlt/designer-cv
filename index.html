@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Oksana Burtova — Graphic / UI Designer with frontend development skills."
+    />
+
+    <title>Oksana Burtova — Graphic / UI Designer</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/content.css" />
+    <link rel="stylesheet" href="./css/portrait-animation.css" />
+    <link rel="stylesheet" href="./css/cv-animation.css" />
+  </head>
+
+  <body>
+    <main class="resume">
+      <aside class="resume-sidebar">
+        <div
+          class="hero__portrait"
+          tabindex="0"
+          role="button"
+          aria-label="Animate portrait composition"
+        >
+          <span
+            class="portrait-shape portrait-shape--main"
+            aria-hidden="true"
+          ></span>
+
+          <span class="portrait-circle" aria-hidden="true"></span>
+
+          <img
+            class="portrait-halftone portrait-halftone--echo"
+            src="./assets/images/portrait-halftone.png"
+            alt=""
+            aria-hidden="true"
+          />
+
+          <img
+            class="portrait-halftone portrait-halftone--primary"
+            src="./assets/images/portrait-halftone.png"
+            alt=""
+            aria-hidden="true"
+          />
+
+          <span class="portrait-scanline" aria-hidden="true"></span>
+
+          <div class="portrait-real-frame">
+            <img
+              class="portrait-real"
+              src="./assets/images/portrait-real_1.png"
+              alt="Portrait of Oksana Burtova"
+              decoding="async"
+            />
+          </div>
+
+          <span
+            class="portrait-shape portrait-shape--noise"
+            aria-hidden="true"
+          ></span>
+
+          <span
+            class="portrait-shape portrait-shape--small"
+            aria-hidden="true"
+          ></span>
+        </div>
+
+        <div class="sidebar-content">
+          <section class="sidebar-section">
+            <h2 class="sidebar-title" data-i18n="contactLabel">Contact</h2>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="contact-label">Phone</span>
+
+                <div class="contact-row">
+                  <a class="contact-value" href="tel:+380981234048">
+                    +38 098 123 40 48
+                  </a>
+
+                  <button
+                    class="contact-copy"
+                    type="button"
+                    data-copy="+38 098 123 40 48"
+                    aria-label="Copy phone number"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-label">Email</span>
+
+                <div class="contact-row">
+                  <a
+                    class="contact-value"
+                    href="mailto:sansen3000sansen@gmail.com"
+                  >
+                    sansen3000sansen@gmail.com
+                  </a>
+
+                  <button
+                    class="contact-copy"
+                    type="button"
+                    data-copy="sansen3000sansen@gmail.com"
+                    aria-label="Copy email address"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact-actions">
+                <a
+                  class="contact-pill"
+                  href="YOUR_LINKEDIN_URL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn ↗
+                </a>
+
+                <a
+                  class="contact-pill"
+                  href="YOUR_GITHUB_URL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub ↗
+                </a>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Irpin, Ukraine</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="sidebar-section">
+            <h2 class="sidebar-title" data-i18n="languagesLabel">Languages</h2>
+
+            <div class="language-list">
+              <div class="language-item">
+                <span class="language-item__name" data-i18n="ukrainianLanguage">
+                  Ukrainian
+                </span>
+
+                <span class="language-item__level" data-i18n="nativeLevel">
+                  Native
+                </span>
+              </div>
+
+              <div class="language-item">
+                <span class="language-item__name" data-i18n="englishLanguage">
+                  English
+                </span>
+
+                <span
+                  class="language-item__level"
+                  data-i18n="englishLevelPlaceholder"
+                >
+                  Level to confirm
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <section class="sidebar-section">
+            <h2 class="sidebar-title" data-i18n="educationLabel">Education</h2>
+
+            <div class="sidebar-entry">
+              <p
+                class="sidebar-entry__title"
+                data-i18n="graphicDesignEducation"
+              >
+                Graphic Design
+              </p>
+
+              <p class="sidebar-entry__meta">STEP Academy · 20XX</p>
+            </div>
+
+            <div class="sidebar-entry">
+              <p class="sidebar-entry__title" data-i18n="javascriptEducation">
+                JavaScript
+              </p>
+
+              <p class="sidebar-entry__meta">STEP Academy · 20XX</p>
+            </div>
+
+            <div class="sidebar-entry">
+              <p class="sidebar-entry__title" data-i18n="fullStackEducation">
+                Full Stack Development
+              </p>
+
+              <p class="sidebar-entry__meta">OAT · 20XX</p>
+            </div>
+          </section>
+
+          <section class="sidebar-section">
+            <h2 class="sidebar-title" data-i18n="certificationsLabel">
+              Certifications
+            </h2>
+
+            <p class="certificate-item" data-i18n="graphicDesignCertificate">
+              Graphic Designer · STEP Academy · 20XX
+            </p>
+
+            <p class="certificate-item" data-i18n="javascriptCertificate">
+              JavaScript · STEP Academy · 20XX
+            </p>
+
+            <p class="certificate-item" data-i18n="fullStackCertificate">
+              Full Stack · OAT · 20XX
+            </p>
+          </section>
+        </div>
+      </aside>
+
+      <div class="resume-main">
+        <header class="hero">
+          <div class="hero__info">
+            <div class="hero__utility">
+              <div class="language-switcher" aria-label="Choose language">
+                <button type="button" data-lang="en" aria-pressed="true">
+                  EN
+                </button>
+
+                <button type="button" data-lang="uk" aria-pressed="false">
+                  UA
+                </button>
+              </div>
+            </div>
+
+            <div class="hero__identity">
+              <span class="hero__cv" aria-hidden="true">
+                <span class="hero__cv-mark">CV</span>
+              </span>
+
+              <div class="hero__name-block">
+                <h1 class="hero__name" data-i18n="name">Oksana Burtova</h1>
+
+                <p class="hero__role" data-i18n="role">Graphic / UI Designer</p>
+
+                <p class="hero__specialization" data-i18n="specialization">
+                  Frontend implementation skills
+                </p>
+
+                <p class="hero__manifesto" data-i18n="manifesto">
+                  I design clear visual systems with implementation in mind —
+                  balancing expression, usability and technical reality.
+                </p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="main-content">
+          <section class="main-section main-section--profile">
+            <h2 class="main-section__title" data-i18n="profileLabel">
+              Profile
+            </h2>
+
+            <p class="profile-text" data-i18n="profileText">
+              Graphic and UI designer with recent training in graphic design and
+              frontend development. I create visual concepts, responsive
+              interfaces and communication materials using Figma and Adobe
+              tools. My understanding of HTML, CSS and JavaScript helps me
+              design with real implementation, structure and usability in mind.
+            </p>
+          </section>
+
+          <section class="main-section">
+            <h2 class="main-section__title" data-i18n="selectedProjectsLabel">
+              Selected Projects
+            </h2>
+
+            <div class="project-row">
+              <div class="project-row__heading">
+                <span class="project-row__number" aria-hidden="true">01</span>
+
+                <h3
+                  class="project-row__title"
+                  data-i18n="interfaceProjectTitle"
+                >
+                  Interface Design
+                </h3>
+              </div>
+
+              <div class="project-row__content">
+                <p class="project-row__type" data-i18n="interfaceProjectType">
+                  Academic / independent project · 20XX
+                </p>
+
+                <p data-i18n="interfaceProjectText">
+                  Responsive interface concept with a structured visual system,
+                  reusable components and an interactive prototype.
+                </p>
+
+                <p class="project-row__meta" data-i18n="interfaceProjectMeta">
+                  Focus: UI design · responsive layouts · Figma
+                </p>
+              </div>
+            </div>
+
+            <div class="project-row">
+              <div class="project-row__heading">
+                <span class="project-row__number" aria-hidden="true">02</span>
+
+                <h3 class="project-row__title" data-i18n="identityProjectTitle">
+                  Visual Identity
+                </h3>
+              </div>
+
+              <div class="project-row__content">
+                <p class="project-row__type" data-i18n="identityProjectType">
+                  Academic / independent project · 20XX
+                </p>
+
+                <p data-i18n="identityProjectText">
+                  Visual identity concept developed across core brand elements
+                  and presentation materials.
+                </p>
+
+                <p class="project-row__meta" data-i18n="identityProjectMeta">
+                  Focus: typography · color · layout · Adobe tools
+                </p>
+              </div>
+            </div>
+
+            <div class="project-row">
+              <div class="project-row__heading">
+                <span class="project-row__number" aria-hidden="true">03</span>
+
+                <h3 class="project-row__title" data-i18n="frontendProjectTitle">
+                  Frontend Interface
+                </h3>
+              </div>
+
+              <div class="project-row__content">
+                <p class="project-row__type" data-i18n="frontendProjectType">
+                  Academic / independent project · 20XX
+                </p>
+
+                <p data-i18n="frontendProjectText">
+                  A responsive interface project connecting visual design with
+                  practical HTML, CSS and JavaScript implementation.
+                </p>
+
+                <p class="project-row__meta" data-i18n="frontendProjectMeta">
+                  Focus: responsive design · HTML · CSS · JavaScript
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="main-section">
+            <h2 class="main-section__title" data-i18n="skillsLabel">Skills</h2>
+
+            <div class="skills-grid">
+              <div class="skill-group">
+                <h3 class="skill-group__title" data-i18n="designSkillsLabel">
+                  Design
+                </h3>
+
+                <p data-i18n="designSkills">
+                  Figma · Photoshop · Illustrator · InDesign · UI Design ·
+                  Visual Identity · Typography · Layout · After Effects ·
+                  Premiere Pro
+                </p>
+              </div>
+
+              <div class="skill-group">
+                <h3
+                  class="skill-group__title"
+                  data-i18n="developmentSkillsLabel"
+                >
+                  Development
+                </h3>
+
+                <p data-i18n="developmentSkills">
+                  HTML · CSS · JavaScript · Git · GitHub
+                </p>
+              </div>
+
+              <div class="skill-group skill-group--additional">
+                <h3
+                  class="skill-group__title"
+                  data-i18n="additionalSkillsLabel"
+                >
+                  Additional
+                </h3>
+
+                <p data-i18n="additionalSkills">3ds Max · Maya · AutoCAD</p>
+              </div>
+            </div>
+          </section>
+
+          <!--
+            Позже заменим YOUR_PORTFOLIO_URL на:
+            ./portfolio.html
+            когда создадим отдельную страницу портфолио.
+          -->
+
+          <a class="portfolio-link" href="YOUR_PORTFOLIO_URL">
+            <span data-i18n="portfolioLink">View portfolio</span>
+            <span class="portfolio-link__line" aria-hidden="true"></span>
+            <span class="portfolio-link__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/translations.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/portrait-animation.js"></script>
+    <script src="./js/cv-animation.js"></script>
+  </body>
+</html>
