@@ -1,38 +1,13 @@
 (() => {
-  const portrait = document.querySelector(".hero__portrait");
-
-  if (!portrait) {
-    return;
-  }
-
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-
-  const primaryHalftone = portrait.querySelector(".portrait-halftone--primary");
-
-  const playPrintEffect = () => {
-    if (reducedMotion.matches) {
-      return;
+  const portrait = document.querySelector('.hero__portrait');
+  if (!portrait) return;
+  // CSS выбирает планшетную ширину и учитывает reduced motion.
+  if (!('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver((entries) => {
+    if (entries.some(entry => entry.isIntersecting)) {
+      portrait.classList.add('is-revealed');
+      observer.disconnect();
     }
-
-    portrait.classList.remove("is-animating");
-
-    void portrait.offsetWidth;
-
-    portrait.classList.add("is-animating");
-  };
-
-  portrait.addEventListener("click", playPrintEffect);
-
-  portrait.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter" && event.key !== " ") {
-      return;
-    }
-
-    event.preventDefault();
-    playPrintEffect();
-  });
-
-  primaryHalftone?.addEventListener("animationend", () => {
-    portrait.classList.remove("is-animating");
-  });
+  }, { threshold: 0.25 });
+  observer.observe(portrait);
 })();

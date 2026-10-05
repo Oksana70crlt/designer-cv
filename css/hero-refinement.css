@@ -1,0 +1,202 @@
+/* Этап 2. Исходное горизонтальное расположение имени и CV
+   берём из styles.css. Здесь меняем вертикальный ритм шапки. */
+:root {
+  --hero-height: 480px;
+}
+/* Текст заканчивается за 44px до нижней границы.
+   При длинном переводе шапка может увеличиваться. */
+.hero__info {
+  justify-content: flex-end;
+  padding-top: 100px;
+  padding-bottom: 44px;
+}
+.hero__identity {
+  min-height: 0;
+}
+.hero__name-block {
+  min-height: 0;
+}
+/* Фон доходит до нижнего края портрета, без светлого провала. */
+.portrait-shape--main {
+  height: 100%;
+}
+.portrait-shape--noise {
+  opacity: 0.32;
+}
+.portrait-circle {
+  border-color: rgba(32, 107, 138, 0.15);
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+
+  padding: 3px;
+
+  border: 1px solid rgba(32, 107, 138, 0.28);
+  border-radius: 999px;
+
+  background: var(--color-bg);
+}
+
+.language-switcher button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 10px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: transparent;
+  color: #425a65;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+  touch-action: manipulation;
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+/* Выбранный язык */
+
+.language-switcher button.active,
+.language-switcher button[aria-pressed="true"] {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+/* Вписываем фотографию по высоте, сохраняя пропорции и голову. */
+@media (min-width: 821px) {
+  .portrait-real-frame {
+    top: 20px;
+    left: 8%;
+    right: 0;
+  }
+  .portrait-real {
+    bottom: 0;
+    left: 50%;
+    right: auto;
+    width: auto;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+  .hero__cv-mark {
+    transform: translateX(-54px);
+  }
+  .hero__cv.is-scrolled .hero__cv-mark {
+    transform: translateX(-18px);
+  }
+}
+.language-switcher button {
+  min-width: 44px;
+  min-height: 44px;
+}
+@media (min-width: 821px) and (max-width: 1000px) {
+  .hero__identity {
+    min-height: 0;
+  }
+  .hero__name {
+    font-size: clamp(34px, 4vw, 40px);
+    letter-spacing: 0.025em;
+  }
+  .hero__role {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+}
+/* Одна колонка: освобождаем всю ширину для имени. */
+@media (max-width: 820px) {
+  :root {
+    --hero-height: clamp(360px, 62vw, 480px);
+  }
+  .hero__cv,
+  .hero__identity::before {
+    display: none;
+  }
+  .hero__info {
+    padding: 86px 32px 38px;
+  }
+  .hero__identity {
+    padding: 0;
+    min-height: 0;
+  }
+  .hero__name-block {
+    min-height: 0;
+    max-width: 540px;
+    margin-inline: auto;
+    text-align: center;
+  }
+  .hero__name {
+    max-width: 9ch;
+    margin-inline: auto;
+    font-size: clamp(44px, 7.5vw, 60px);
+    line-height: 1;
+  }
+  .hero__manifesto {
+    margin-inline: auto;
+  }
+  .hero__utility {
+    top: 18px;
+    right: 24px;
+  }
+}
+@media (max-width: 560px) {
+  :root {
+    --hero-height: clamp(280px, 78vw, 360px);
+  }
+  .hero__info {
+    padding: 78px 24px 32px;
+  }
+  .hero__name {
+    font-size: clamp(38px, 11vw, 54px);
+  }
+  .hero__role {
+    margin-top: 18px;
+    font-size: 14px;
+    letter-spacing: 0.07em;
+  }
+  .hero__specialization {
+    font-size: 11px;
+    letter-spacing: 0.07em;
+  }
+  .hero__manifesto {
+    margin-top: 16px;
+  }
+  .portrait-halftone,
+  .portrait-shape--noise {
+    display: none;
+  }
+  .portrait-real-frame {
+    top: 20px;
+    left: 0;
+    right: 0;
+  }
+  .portrait-real {
+    left: 50%;
+    right: auto;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__cv-mark,
+  .hero__cv.is-scrolled .hero__cv-mark {
+    transform: none;
+    transition: none;
+  }
+}
